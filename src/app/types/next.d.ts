@@ -1,11 +1,9 @@
-// types/next.d.ts
-import { SessionData } from "express-session";
-import { SamlUserProfile } from "../lib/passport";
-import { NextApiRequest } from "next";
+// src/types/next.d.ts
+import { SamlUserProfile } from "@/lib/passport";
 
 declare module "next" {
   interface NextApiRequest {
-    session: SessionData;
+    login(user: SamlUserProfile, callback: (err?: any) => void): void;
     user?: SamlUserProfile;
   }
 }

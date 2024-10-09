@@ -1,7 +1,8 @@
 // pages/api/auth/callback.ts
 import { NextApiRequest, NextApiResponse } from "next";
-import passport from "../../lib/passport";
-import { SamlUserProfile } from "../../lib/passport";
+import passport from "../../../lib/passport";
+
+import { SamlUserProfile } from "../../../lib/passport";
 
 export default async function handler(
   req: NextApiRequest & { user?: SamlUserProfile },

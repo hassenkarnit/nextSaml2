@@ -1,6 +1,6 @@
 // pages/api/auth/login.ts
 import { NextApiRequest, NextApiResponse } from "next";
-import passport from "../../lib/passport";
+import passport from "../../../lib/passport";
 import { promisify } from "util";
 
 export default async function handler(
